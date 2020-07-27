@@ -2,7 +2,7 @@ $(document).ready(function() {
     var $date = $(".date");
     var $inputForm = $(".inputs");
     
-    var hours = ["9 am","10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm"];
+    var hours = ["9 am","10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm","5 pm"];
     var currentHour = moment().format("H");
 
     $date.text(moment().format("llll"));
@@ -18,19 +18,19 @@ $(document).ready(function() {
 
         var $buttonDiv = $("<div>");
 
-        var $saveButton = $("<button>");
+        var $saveBtn = $("<button>");
 
         var $saveIcon = $("<i>");
 
-        $inputGroupDiv.addClass("input-group mb-3"); 
+        $inputGroupDiv.addClass("input-group mb-3 textarea row no-gutters description"); 
 
-        $input.addClass("form-control").attr("type", "text");
+        $input.addClass("form-control textarea row no-gutters description").attr("type", "text");
 
-        $hourDiv.addClass("input-group-prepend input-group-text").text(hours[i]);
+        $hourDiv.addClass("input-group-prepend input-group-text hour float-left").text(hours[i]);
 
         $buttonDiv.addClass("input-group-append");
 
-        $saveButton.addClass("btn btn-primary saveButton");
+        $saveBtn.addClass("btn btn-info saveBtn saveBtn i:hover");
 
         $saveIcon.addClass("material-icons").text("save");
 
@@ -41,21 +41,21 @@ $(document).ready(function() {
             $input.addClass("past");
         }
         else {
-            $input.addClass("current");
+            $input.addClass("present");
         }
 
         if(localStorage.getItem(hours[i])) {
             $input.val(localStorage.getItem(hours[i]));
         }
 
-        $saveButton.append($saveIcon);
-        $buttonDiv.append($saveButton);
+        $saveBtn.append($saveIcon);
+        $buttonDiv.append($saveBtn);
         $inputGroupDiv.append($hourDiv, $input, $buttonDiv);
         $inputForm.append($inputGroupDiv);
 
     }
-
-    $(document).on("click", ".saveButton", function(e){
+    
+    $(document).on("click", ".saveBtn", function(e){
         e.preventDefault();
 
         var inputValue = $(this).parents(".input-group-append").siblings("input").val();
