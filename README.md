@@ -23,4 +23,4 @@ and their upcomming tasks.
 
 ## Contribution
 
-&andcopy 2020 Shadrea Foremna
+&copy 2020 Shadrea Foreman
