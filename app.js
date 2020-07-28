@@ -24,7 +24,7 @@ $(document).ready(function() {
 
         $inputGroupDiv.addClass("input-group  textarea row no-gutters time-block description"); 
 
-        $input.addClass("form-control textarea row no-gutters description time-block").attr("type", "text");
+        $input.addClass("form-control textarea row no-gutters time-block  description").attr("type", "text");
 
         $hourDiv.addClass("input-group-prepend input-group-text hour float-left").text(hours[i]);
 
