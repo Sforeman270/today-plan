@@ -15,7 +15,7 @@ and their upcomming tasks.
 * Moment.js
 
 ## Website
-
+https://sforeman270.github.io/today-plan/
 
 ## Screenshots
 
@@ -28,4 +28,4 @@ and their upcomming tasks.
 
 ## Contribution
 
-&copy 2020 Shadrea Foreman
+ ©2020 Shadrea Foreman
