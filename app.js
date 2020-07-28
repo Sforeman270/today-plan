@@ -46,6 +46,7 @@ $(document).ready(function() {
 
         if(localStorage.getItem(hours[i])) {
             $input.val(localStorage.getItem(hours[i]));
+            console,log(hours[i]);
         }
 
         $saveBtn.append($saveIcon);
@@ -62,6 +63,7 @@ $(document).ready(function() {
         var inputHour = $(this).parents(".input-group-append").siblings("input-group-text").text();
 
         localStorage.setItem(inputHour, inputValue);
+        console.log(inputValue);
 
         
     })
