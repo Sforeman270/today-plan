@@ -22,9 +22,9 @@ $(document).ready(function() {
 
         var $saveIcon = $("<i>");
 
-        $inputGroupDiv.addClass("input-group mb-3 textarea row no-gutters description"); 
+        $inputGroupDiv.addClass("input-group  textarea row no-gutters time-block description"); 
 
-        $input.addClass("form-control textarea row no-gutters description").attr("type", "text");
+        $input.addClass("form-control textarea row no-gutters description time-block").attr("type", "text");
 
         $hourDiv.addClass("input-group-prepend input-group-text hour float-left").text(hours[i]);
 
